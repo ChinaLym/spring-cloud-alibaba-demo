@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: spring-cloud-alibaba-demo-provider
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+    # 限流的 UI 界面
+    sentinel:
+      eager: true
+      transport:
+        dashboard: 127.0.0.1:8999
+server:
+  port: 8080
+
+# dubbo 相关
+dubbo:
+  scan:
+    base-packages: org.lym.provider.dubbo
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

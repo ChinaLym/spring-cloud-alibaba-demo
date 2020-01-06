@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-cloud-alibaba-demo-consumer
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+  sentinel:
+    eager: true
+    transport:
+      dashboard: 127.0.0.1:8999 #sentinel 控制台地址
+
+server:
+  port: 8081
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: spring-cloud-alibaba-demo-provider
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
