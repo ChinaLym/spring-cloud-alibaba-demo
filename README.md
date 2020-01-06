@@ -6,6 +6,16 @@
 
 spring cloud alibaba 详情： https://github.com/spring-cloud-incubator/spring-cloud-alibaba
 
+spring-cloud-alibaba 基础组件入门。
+
+spring cloud版本：G
+
+alibaba 版本：2.1.1
+
+所有使用的为 2020/1/6 最新版
+
+默认分支未包含 seata demo，利于初学者一步步学习。
+
 # 二、主要组件说明
 
 编号 | 模块 | 描述 | 项目地址
@@ -252,8 +262,3 @@ https://github.com/spring-cloud-incubator/spring-cloud-alibaba/blob/master/sprin
 
 
 ## 2.Gitee
-
-
-
-
-
